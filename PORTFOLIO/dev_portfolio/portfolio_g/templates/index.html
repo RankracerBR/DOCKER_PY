@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <title>
+          Olá!
+        </title>
+        <link rel="icon" href="{% static 'blade_runner.ico' %}" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <style>
+            body {
+                background-image: url('{% static "img/blade_runner_wallpaper.jpg" %}');
+                transition: transform 0.3s ease;
+                margin-top: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "centralizado">
+            <h1 class = "fonte-personalizada">OLÁ, {{ mensagem }}</h1>
+        </div>
+        <script src="{% static 'Js/color.js'%}"></script>
+        <div class="container">
+            <img class ="imagem-personalizada" src = "{% static 'img/foto.jpeg' %}" alt="Imagem" style="margin-top: 10px;">
+        </div>
+    </body>

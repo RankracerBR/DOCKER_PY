@@ -57,7 +57,7 @@ ul li:hover::after{
     transform: scale(0.8);
 }
 
-.centralizado, .h1 {
+.centralizado, .h2 {
     text-align: center;
     margin-top: 200px;
     font-size: 72px;
@@ -102,4 +102,4 @@ ul li:hover::after{
     100% {
       background-position: 40px 0;
     }
-  }
+}

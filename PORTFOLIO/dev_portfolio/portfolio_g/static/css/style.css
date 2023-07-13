@@ -97,13 +97,55 @@ ul li:hover::after{
 }
 
 .voltar-link {
+    font-family: Arial, sans-serif;
     position: absolute;
     top: -1;
     right: -2;
     color: purple;
+    -webkit-text-stroke: 1px rgb(182, 177, 177);
 }
 
-.commentInput{
+.commentForm{
     top: -30;
     right: -30;
 }
+
+.comentario_{
+    background-color: rgba(50, 78, 112, 0.5);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nome-amarelo{
+    color: yellow;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.nome-verde{
+    color: green;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.secao-comentario{
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.form-comentario{
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.horario {
+    font-family: Arial, sans-serif;
+    color: #999;
+    font-size: 12px;
+}
+
+
+

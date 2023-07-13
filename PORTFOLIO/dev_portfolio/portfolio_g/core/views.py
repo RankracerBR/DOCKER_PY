@@ -16,11 +16,12 @@ def main_page(request):
 
     return render(request, 'index.html', {"mensagem": mensagem})
 
-def Usuario_Comentario(request):
+def enviar_comentario(request):
     if request.method == 'POST':
-        nome = request.POST['nome']
-        comentario = request.POST['comentario']
-        usuario = Usuarios(nome=nome, comentario=comentario)
+        nome = request.POST.get('nome')
+        comentario = request.POST.get('comentario')
+        usuario = Usuarios(nome=nome, comentario=comentario, data_postagem=datetime.now())
         usuario.save()
-        return render('secao_cometario.html')
-    return render(request, 'secao_comentario.html')
+
+    usuarios = Usuarios.objects.all()
+    return render(request, 'secao_comentario.html', {'usuarios': usuarios})

@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <title>
+            Comentários
+        </title>
+        <a href="/" class="voltar-link">Voltar</a>
+        <style>
+            body {
+                background-image: url('{% static "img/blade_runner_wallpaper_2.jpg" %}');
+            }
+        </style>
+    </head>
+
+    <body>
+        <p></p>
+        <h1>Seção de Comentários
+        </h1>
+        <form id="commentForm">
+            <input type = "text" id="commentInput" placeholder="Digite seu comentario">
+    </body>

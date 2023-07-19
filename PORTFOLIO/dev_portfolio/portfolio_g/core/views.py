@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from datetime import datetime
-from .models import Usuarios
+from core.models import Usuarios
+import matplotlib.pyplot as plt
+from io import BytesIO
+import base64
 
 # Create your views here.
 def main_page(request):
@@ -16,6 +19,7 @@ def main_page(request):
 
     return render(request, 'index.html', {"mensagem": mensagem})
 
+    
 def enviar_comentario(request):
     if request.method == 'POST':
         nome = request.POST.get('nome')

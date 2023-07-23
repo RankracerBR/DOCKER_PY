@@ -8,11 +8,10 @@
         <a href="/" class="voltar-link">Voltar</a>
         <style>
             body {
-                background-image: url('{% static "img/blade_runner_wallpaper_2.jpg" %}');
-            }
+                background-image: url('{% static "img/blade_runner_wallpaper_2.jpg" %}'); 
+                }
         </style>
     </head>
-
     <body>
         <center>
             <h1 class="secao-comentario">
@@ -21,18 +20,24 @@
         <form class="form-comentario" method="post" action="{% url 'enviar_comentario' %}">
            {% csrf_token %}
             <label for="nome">Nome:</label>
-            <input type="text" name="nome" required>
-            <br>
-            <label for="comentario">Comentário:</label>
-            <textarea name="comentario" required></textarea>
-            <br>
-            <input type="submit" value="Enviar">
+                <input type="text" name="nome" required>
+                <br>
+                <label for="comentario">Comentário:</label>
+                <textarea name="comentario" required></textarea>
+                <br>
+                <input type="submit" value="Enviar">
         </form>
         <div class="comentario_">
         {% for usuario in usuarios %}
-            <h3 class="nome-amarelo">Nome: {{ usuario.nome }}</h3>
-            <p class="nome-verde">Comentário: {{ usuario.comentario}}</p>
-            <p class="horario">{{ usuario.data_postagem }}</p>
+            <h3 class="nome-amarelo">
+                Nome: {{ usuario.nome }}
+            </h3>
+            <p class="nome-verde">
+                Comentário: {{ usuario.comentario}}
+            </p>
+            <p class="horario">
+                {{ usuario.data_postagem }}
+            </p>
         {% endfor %}
         </div>
         </center>    

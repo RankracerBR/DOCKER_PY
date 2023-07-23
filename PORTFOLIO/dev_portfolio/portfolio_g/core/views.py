@@ -19,7 +19,7 @@ def main_page(request):
 
     return render(request, 'index.html', {"mensagem": mensagem})
 
-    
+
 def enviar_comentario(request):
     if request.method == 'POST':
         nome = request.POST.get('nome')

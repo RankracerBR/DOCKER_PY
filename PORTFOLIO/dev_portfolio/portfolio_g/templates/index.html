@@ -8,17 +8,21 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
         <div class = "centralizado">
             <h2 class = "fonte-personalizada">
-                OLÁ, {{ mensagem }}
+                <ul><li>
+                        OLÁ, {{ mensagem }}
+                </ul></li>
             </h2>
         </div>
         <style>
             body {
                 background-image: url('{% static "img/blade_runner_wallpaper.jpg" %}');
-            }
+                background-repeat: no-repeat; 
+                background-size: cover; 
+                }
         </style>
     </head>
     <body>
-        <div class="quadrado">
+        <div class="quadrado-esquerdo">
             <span class="conteudo">Olá tudo bem, bem-vindo ao meu portfolio, aqui mostro alguns projetos que pratiquei ao longo da minha jornada, dê uma olhada ^^</span>
         </div>
         <a href="Comentario/" class="comentario-link">Mande seu comentario</a>
@@ -47,6 +51,22 @@
                     </a>
                 </li> 
             </ul>  
-        </center> 
-        <script src="{% static 'js/load_page.js' %}"></scriopt>
+        </center>
+        <div class="image-container">
+            <img id="image-display" src="" alt="Image">
+        </div>
+        <div class="buttons">
+            <button id="arrow-left">←</button>
+            <button id="arrow-right">→</button>
+        </div>
+        <script>
+            const images = [
+                "{% static 'img/im1.png' %}",
+                "{% static 'img/im2.png' %}",
+                "{% static 'img/im3.png' %}",
+                "{% static 'img/im4.png' %}",
+                "{% static 'img/im5.png' %}",
+            ];
+        </script>
+        <script src="{% static 'js/projects_git.js'%}"></script>
     </body>
